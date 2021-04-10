@@ -1,3 +1,3 @@
-# JournalApp
+# UE - UNAL
 
-Una aplicación para llevar mi diario hecha con React y Redux.
+Informe interactivo , react + firebase
