@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux'
 
 import { startLogout } from '../../actions/auth';
 
-export const Sidebar = () => {
+export const Navbar = () => {
 
     const dispatch = useDispatch();
 
@@ -12,7 +12,7 @@ export const Sidebar = () => {
     }
 
     return (
-        <nav className="journal__sidebar">
+        <nav className="navbar">
             
                 <button 
                     className="btn"

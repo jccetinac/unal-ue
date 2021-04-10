@@ -1,9 +1,9 @@
 import React from 'react';
-import { Sidebar } from './Sidebar';
+import { Navbar } from './Navbar';
 import { useSelector } from 'react-redux';
 
 
-export const JournalScreen = () => {
+export const HomeScreen = () => {
 
     const { indicadoresList} = useSelector( state => state.indicadores);
     console.log(indicadoresList);
@@ -11,10 +11,10 @@ export const JournalScreen = () => {
     return (
         <div className="journal__main-content">
             
-            <Sidebar />
+            <Navbar />
 
 
-            <main>
+            <main className="main">
 
                 {indicadoresList?.map( indicador => (
                     <div className="jumbotron p-3" key={ indicador.id }>

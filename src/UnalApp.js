@@ -6,7 +6,7 @@ import { AppRouter } from './routers/AppRouter';
 
 
 
-export const JournalApp = () => {
+export const UnalApp = () => {
     return (
         <Provider store={ store }>
             <AppRouter />
