@@ -2,8 +2,6 @@ import { db } from "../firebase/firebase-config";
 
 export const loadIndicadores = async () => {
 
-
-   console.log('ingreso a indicadores');
    const indicadoresSnap = await db.collection(`/indicadores`).get();
 
    const indicadores = [];
@@ -13,6 +11,6 @@ export const loadIndicadores = async () => {
             ...snapChild.data()
         });
    }); 
-   console.log(indicadores);
+
    return indicadores;
 }
