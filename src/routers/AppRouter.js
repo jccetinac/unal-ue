@@ -14,6 +14,8 @@ import { PrivateRoute } from './PrivateRoute';
 import { JournalScreen } from '../components/journal/JournalScreen';
 import { login } from '../actions/auth';
 import { PublicRoute } from './PublicRoute';
+import { loadIndicadores } from '../helpers/load-indicadores';
+import { setIndicadores } from '../actions/indicadores';
 
 export const AppRouter = () => {
 
@@ -26,11 +28,14 @@ export const AppRouter = () => {
 
     useEffect(() => {
         
-        firebase.auth().onAuthStateChanged( (user) => {
+        firebase.auth().onAuthStateChanged( async (user) => {
 
             if ( user?.uid ) {
                 dispatch( login( user.uid, user.displayName ) );
                 setIsLoggedIn( true );
+                const indicadores = await loadIndicadores();
+                dispatch( setIndicadores(indicadores) );              
+
             } else {
                 setIsLoggedIn( false );
             }
