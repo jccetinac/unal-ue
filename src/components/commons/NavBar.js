@@ -15,7 +15,7 @@ export const Navbar = () => {
         <nav className="navbar">
             
                 <button 
-                    className="btn"
+                    className="btn bt-primary"
                     onClick={ hanleLogout }
                 >
                     Logout

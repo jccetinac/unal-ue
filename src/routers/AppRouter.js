@@ -11,7 +11,8 @@ import { firebase } from '../firebase/firebase-config'
 import { AuthRouter } from './AuthRouter';
 import { PrivateRoute } from './PrivateRoute';
 
-import { HomeScreen } from '../components/home/HomeScreen';
+import { HomeScreen } from '../components/pages/HomeScreen';
+import { SecondaryScreen } from "../components/pages/SecondaryScreen";
 import { login } from '../actions/auth';
 import { PublicRoute } from './PublicRoute';
 import { loadIndicadores } from '../helpers/load-indicadores';
@@ -69,6 +70,12 @@ export const AppRouter = () => {
                         isAuthenticated={ isLoggedIn }
                         path="/"
                         component={ HomeScreen }
+                    />
+                    <PrivateRoute 
+                        exact
+                        isAuthenticated={ isLoggedIn }
+                        path="/secondary"
+                        component={ SecondaryScreen }
                     />
 
                     <Redirect to="/auth/login" />
