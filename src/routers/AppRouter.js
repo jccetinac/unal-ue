@@ -11,9 +11,12 @@ import { firebase } from '../firebase/firebase-config'
 import { AuthRouter } from './AuthRouter';
 import { PrivateRoute } from './PrivateRoute';
 
-import { JournalScreen } from '../components/journal/JournalScreen';
+import { HomeScreen } from '../components/pages/HomeScreen';
+import { SecondaryScreen } from "../components/pages/SecondaryScreen";
 import { login } from '../actions/auth';
 import { PublicRoute } from './PublicRoute';
+import { loadIndicadores } from '../helpers/load-indicadores';
+import { setIndicadores } from '../actions/indicadores';
 
 export const AppRouter = () => {
 
@@ -26,11 +29,14 @@ export const AppRouter = () => {
 
     useEffect(() => {
         
-        firebase.auth().onAuthStateChanged( (user) => {
+        firebase.auth().onAuthStateChanged( async (user) => {
 
             if ( user?.uid ) {
                 dispatch( login( user.uid, user.displayName ) );
                 setIsLoggedIn( true );
+                const indicadores = await loadIndicadores();
+                dispatch( setIndicadores(indicadores) );              
+
             } else {
                 setIsLoggedIn( false );
             }
@@ -63,7 +69,13 @@ export const AppRouter = () => {
                         exact
                         isAuthenticated={ isLoggedIn }
                         path="/"
-                        component={ JournalScreen }
+                        component={ HomeScreen }
+                    />
+                    <PrivateRoute 
+                        exact
+                        isAuthenticated={ isLoggedIn }
+                        path="/secondary"
+                        component={ SecondaryScreen }
                     />
 
                     <Redirect to="/auth/login" />
