@@ -22,6 +22,7 @@ export const HomeScreen = () => {
                         <p>{indicador.value}</p>
                         <p>{indicador.type}</p>
                         <i>{indicador.autho}</i>
+                        <hr/>
                     </div>
                 ))}
 
