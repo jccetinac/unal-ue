@@ -15,7 +15,7 @@ export const HomeScreen = () => {
 
 
             <main className="main">
-                <h3>llamando datos:</h3>
+                <h3>llamando datosss:</h3>
 
                 {indicadoresList?.map( indicador => (
                     <div className="jumbotron p-3" key={ indicador.id }>
