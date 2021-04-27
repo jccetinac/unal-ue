@@ -17,6 +17,8 @@ import { login } from '../actions/auth';
 import { PublicRoute } from './PublicRoute';
 import { loadIndicadores } from '../helpers/load-indicadores';
 import { setIndicadores } from '../actions/indicadores';
+import { DashboardScreen } from '../components/pages/DashboardScreen';
+import { CityScreen } from '../components/pages/CityScreen';
 
 export const AppRouter = () => {
 
@@ -77,7 +79,26 @@ export const AppRouter = () => {
                         path="/secondary"
                         component={ SecondaryScreen }
                     />
+                    <PrivateRoute 
+                        exact
+                        isAuthenticated={ isLoggedIn }
+                        path="/dashboard"
+                        component={ DashboardScreen }
+                    />
+                    <PrivateRoute 
+                        exact
+                        isAuthenticated={ isLoggedIn }
+                        path="/dashboard/city/:city"
+                        component={ CityScreen }
+                    />      
 
+                     <PrivateRoute 
+                        exact
+                        isAuthenticated={ isLoggedIn }
+                        path="/dashboard/city/:city"
+                        component={ CityScreen }
+                    /> 
+                                                     
                     <Redirect to="/auth/login" />
 
 
