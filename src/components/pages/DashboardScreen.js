@@ -8,10 +8,10 @@ import { Bar } from "react-chartjs-2";
 
 export const DashboardScreen = () => {
   const data = {
-    labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+    labels: ["Bogota", "Medellin", "Cali", "Pereira", "Ibague", "Otra"],
     datasets: [
       {
-        label: "# of Votes",
+        label: "indicador #1",
         data: [12, 19, 3, 5, 2, 3],
         backgroundColor: [
           "rgba(255, 99, 132, 0.2)",
