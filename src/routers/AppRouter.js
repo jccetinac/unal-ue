@@ -17,8 +17,14 @@ import { login } from '../actions/auth';
 import { PublicRoute } from './PublicRoute';
 import { loadIndicadores } from '../helpers/load-indicadores';
 import { setIndicadores } from '../actions/indicadores';
-import { DashboardScreen } from '../components/pages/DashboardScreen';
 import { CityScreen } from '../components/pages/CityScreen';
+import { ProyectoScreen } from '../components/pages/ProyectoScreen';
+import { IndicadoresScreen } from '../components/pages/IndicadoresScreen';
+import { DimensionScreen } from '../components/pages/DimensionScreen';
+import { IndicadorScreen } from '../components/pages/IndicadorScreen';
+import { ProductosScreen } from '../components/pages/ProductosScreen';
+import { ArchivosScreen } from '../components/pages/ArchivosScreen';
+import { RegionesScreen } from '../components/pages/RegionesScreen';
 
 export const AppRouter = () => {
 
@@ -76,14 +82,52 @@ export const AppRouter = () => {
                     <PrivateRoute 
                         exact
                         isAuthenticated={ isLoggedIn }
+                        path="/proyecto"
+                        component={ ProyectoScreen }
+                    />     
+                    <PrivateRoute 
+                        exact
+                        isAuthenticated={ isLoggedIn }
+                        path="/productos"
+                        component={ ProductosScreen }
+                    />                    
+                    <PrivateRoute 
+                    exact
+                    isAuthenticated={ isLoggedIn }
+                    path="/indicadores"
+                    component={ IndicadoresScreen }
+                    />
+
+                    <PrivateRoute 
+                    exact
+                    isAuthenticated={ isLoggedIn }
+                    path="/dimension"
+                    component={ DimensionScreen }
+                    />
+                    <PrivateRoute 
+                        exact
+                        isAuthenticated={ isLoggedIn }
+                        path="/archivos"
+                        component={ ArchivosScreen }
+                    />
+
+                    <PrivateRoute 
+                        exact
+                        isAuthenticated={ isLoggedIn }
+                        path="/regiones"
+                        component={ RegionesScreen }
+                    />                    
+                    <PrivateRoute 
+                        exact
+                        isAuthenticated={ isLoggedIn }
                         path="/secondary"
                         component={ SecondaryScreen }
                     />
                     <PrivateRoute 
                         exact
                         isAuthenticated={ isLoggedIn }
-                        path="/dashboard"
-                        component={ DashboardScreen }
+                        path="/indicador/:id"
+                        component={ IndicadorScreen }
                     />
                     <PrivateRoute 
                         exact

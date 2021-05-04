@@ -5,8 +5,9 @@ import { Navbar } from "../commons/NavBar";
 import { DetailsGeneral } from "../commons/DetailsGeneral";
 import { Doughnut } from "react-chartjs-2";
 import { Bar } from "react-chartjs-2";
+import { Footer } from "../commons/Footer";
 
-export const DashboardScreen = () => {
+export const IndicadorScreen = () => {
   const data = {
     labels: ["Bogota", "Medellin", "Cali", "Pereira", "Ibague", "Otra"],
     datasets: [
@@ -39,9 +40,9 @@ export const DashboardScreen = () => {
       <Navbar />
 
       <main className="container pt-5">
-        <h1>DashBoard</h1>
-        <FilterGeneral />
-        <DescriptionGeneral />
+        <h1>Indicador</h1>
+        <DescriptionGeneral /><FilterGeneral />
+        
         <div className="row mt-4">
           <div className="col-md-6">
             <div className="container-graphic">
@@ -49,10 +50,11 @@ export const DashboardScreen = () => {
             </div>
           </div>
           <div className="col-md-6">
-            <DetailsGeneral />
+            <Bar data={data} width={150} height={150} />
           </div>
         </div>
       </main>
+      <Footer/>
     </div>
   );
 };
