@@ -9,7 +9,7 @@ export const DemoScreen = () => {
     console.log(indicadoresList);
 
     return (
-        <div className="journal__main-content">
+        <div>
             
             <Navbar />
 

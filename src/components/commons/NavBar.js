@@ -13,15 +13,15 @@ export const Navbar = () => {
     }
 
     return (
-        <nav className="navbar">
+        <nav className="navbar pb-0">
 
-            <div className="container">
-                <p className="text-white">Logos presidencia</p>
+            <div className="container-fluid">
+                <img src="./img/logo_min.jpeg" className="logo" ></img>
             </div>
 
-            <div className="container">
-                <button className="btn bt-primary text-white"onClick={ hanleLogout }>Logout</button>
-                <Link className="btn bt-primary text-white" to="/"className="link">Inicio</Link>
+            <div className="links container-fluid bg-primary pb-0">
+                <button className="btn bt-primary text-white log-out"onClick={ hanleLogout }><i class="fa fa-power-off"></i></button>
+                <Link className="btn bt-primary text-white " to="/"className="link">Inicio</Link>
                 <Link className="btn bt-primary text-white" to="/proyecto"className="link">Proyecto</Link>
                 <Link className="btn bt-primary text-white" to="/indicadores"className="link">Indicadores</Link>
                 <Link className="btn bt-primary text-white" to="/productos"className="link">Productos</Link>

@@ -2,6 +2,7 @@ import React from 'react';
 import { Navbar } from '../commons/NavBar';
 import { useSelector } from 'react-redux';
 import { Footer } from '../commons/Footer';
+import { Link } from 'react-router-dom';
 
 
 export const ProyectoScreen = () => {
@@ -24,7 +25,7 @@ export const ProyectoScreen = () => {
                         <img src="https://picsum.photos/500/500" className="img-fluid" />
                     </div>
                     <div className="col-md-6">
-                        <button className="btn btn-primary">producto (ARCHIVOS)</button>
+                        <Link to="/archivos" className="btn btn-primary">producto (ARCHIVOS)</Link>
                     </div>
                 </div>   
             </main>

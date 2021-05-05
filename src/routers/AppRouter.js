@@ -101,7 +101,7 @@ export const AppRouter = () => {
                     <PrivateRoute 
                     exact
                     isAuthenticated={ isLoggedIn }
-                    path="/dimension"
+                    path="/dimension/:id"
                     component={ DimensionScreen }
                     />
                     <PrivateRoute 
