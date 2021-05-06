@@ -2,7 +2,7 @@ import React from 'react';
 import { Navbar } from '../commons/NavBar';
 import { useSelector } from 'react-redux';
 import { Footer } from '../commons/Footer';
-
+import SimpleSlider from '../commons/Slider';
 
 export const HomeScreen = () => {
 
@@ -15,16 +15,9 @@ export const HomeScreen = () => {
             <Navbar />
 
 
-            <main className="main container p-5">
-                <div className="row">
-                    <div className="col-md-6">
-                        <p>CONOZCA LA ESTRUCTURACION DE UN INSTRUMENTO PERIODICO DE MEDICION DEL EMPRENDMINETO PARA COLOMBIA</p>
-                    </div>
-                    <div className="col-md-6">
-                        <img src="https://picsum.photos/500/500" className="img-fluid" />
-                    </div>
-                </div>   
-            </main>
+   
+                <SimpleSlider />
+           
 
             <Footer/>
 

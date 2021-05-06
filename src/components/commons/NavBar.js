@@ -16,7 +16,7 @@ export const Navbar = () => {
         <nav className="navbar pb-0">
 
             <div className="container-fluid">
-                <img src="./img/logo_min.jpeg" className="logo" ></img>
+                <img src="/img/logo_min.jpeg" className="logo" ></img>
             </div>
 
             <div className="links container-fluid bg-primary pb-0">

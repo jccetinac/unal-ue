@@ -37,8 +37,8 @@
 }
 
 .footer{
-    background-color:$middle-grey;
-    margin-bottom: 100px;
+    border-top:1px solid $primary;
+    margin-top: 100px !important;
 
     .logos{
         max-width: 100%;
@@ -46,11 +46,25 @@
 }
 
 
-.main{
-    margin-top:30px;
-}
+
 
 body{
     padding-bottom: 100px;
     overflow-x: hidden;
+}
+
+.main{
+    margin-top:30px;
+}
+
+.carousel-item{
+    background-color: $primary-dark;
+}
+
+
+.carrusel{
+    .item{ 
+        background-color: cadetblue;
+        min-height: 80vh;
+    }
 }
