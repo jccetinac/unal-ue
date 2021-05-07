@@ -20,12 +20,12 @@ export const Navbar = () => {
             </div>
 
             <div className="links container-fluid bg-primary-light pb-0">
-                <button className="btn bt-primary text-white log-out"onClick={ hanleLogout }><i class="fa fa-power-off"></i></button>
-                <Link className="btn bt-primary text-white " to="/"className="link">Inicio</Link>
-                <Link className="btn bt-primary text-white" to="/proyecto"className="link">Proyecto</Link>
-                <Link className="btn bt-primary text-white" to="/indicadores"className="link">Indicadores</Link>
-                <Link className="btn bt-primary text-white" to="/productos"className="link">Productos</Link>
-                <Link className="btn bt-primary text-white" to="/regiones"className="link">Regiones</Link>
+                <button className="btn btn-primary text-white log-out"onClick={ hanleLogout }><i className="fa fa-power-off"></i></button>
+                <Link className="btn btn-primary text-white " to="/"className="link">Inicio</Link>
+                <Link className="btn btn-primary text-white" to="/proyecto"className="link">Proyecto</Link>
+                <Link className="btn btn-primary text-white" to="/indicadores"className="link">Indicadores</Link>
+                <Link className="btn btn-primary text-white" to="/productos"className="link">Productos</Link>
+                <Link className="btn btn-primary text-white" to="/regiones"className="link">Regiones</Link>
             </div>
         </nav>
     )

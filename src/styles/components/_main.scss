@@ -13,6 +13,21 @@
 .text-justify{
     text-align: justify;
 }
+
+.text-gray{
+    color:gray;
+}
+
+.loader-container{
+    .loader{
+        width: 100px;
+        margin: auto;
+        display: block;
+        margin-top: 100px;
+    }
+}
+
+
 .navbar{
     background-color: white;
     .logo{
@@ -93,7 +108,7 @@ body{
     }
 }
 
-.archivos{
+.productos{
     .row{
         margin-top: 20px;
     }
@@ -102,5 +117,16 @@ body{
         color: white;
         text-align: center;
         padding: 2em;
+        height: 30vh;
+        margin-top: 30px;
+        h3{
+            font-size: 1.4rem;
+            text-align: center;
+            word-break: break-all;
+        }
+        i{
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
     }
 }

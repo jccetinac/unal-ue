@@ -15,42 +15,56 @@ export const ProductosScreen = () => {
             <Navbar />
 
 
-            <main className="main container p-5">
+            <main className="main container productos p-5">
        
                 <div className="row">
                     <div className="col-md-3">
-                      <div className="squad" >
+                      <div className="squad">
                           <i className="fa fa-archive"></i>
-                        <h3>Bateria de indicadores</h3>
+                        <h3>Bateria de<br/>indicadores</h3>
                       </div>  
                     </div>                    
                     <div className="col-md-3">
-                        <img src="https://picsum.photos/500/500" className="img-fluid" />
-                        <h3>Evaluación de impacto</h3>
+                        <div className="squad">
+                          <i className="fa fa-archive"></i>
+                        <h3>Evaluación de<br/> impacto</h3>
+                        </div>
                     </div>
                     <div className="col-md-3">
-                        <img src="https://picsum.photos/500/500" className="img-fluid" />
-                        <h3>Seminarios</h3>
+                        <div className="squad">
+                            <i className="fa fa-archive"></i>
+                            <h3>Seminarios</h3>
+                        </div>
                     </div>                    
                     <div className="col-md-3">
-                        <img src="https://picsum.photos/500/500" className="img-fluid" />
-                        <h3>Conferencias Especializadas</h3>
+                        <div className="squad">
+                            <i className="fa fa-archive"></i>
+                            <h3>Conferencias<br/>Especializadas</h3>
+                        </div>
                     </div> 
                     <div className="col-md-3">
-                        <img src="https://picsum.photos/500/500" className="img-fluid" />
-                        <h3>Estudios sobre emprendimiento</h3>
+                        <div className="squad">
+                            <i className="fa fa-archive"></i>
+                            <h3>Estudios sobre<br/> emprendimiento</h3>
+                        </div>    
                     </div> 
                     <div className="col-md-3">
-                        <img src="https://picsum.photos/500/500" className="img-fluid" />
-                        <h3>Estudios Especializados</h3>
+                        <div className="squad">
+                            <i className="fa fa-archive"></i>
+                            <h3>Estudios <br/>Especializados</h3>
+                        </div>    
                     </div> 
                     <div className="col-md-3">
-                        <img src="https://picsum.photos/500/500" className="img-fluid" />
-                        <h3>Diplomados</h3>
+                        <div className="squad">
+                            <i className="fa fa-archive"></i>
+                            <h3>Diplomados</h3>
+                        </div>    
                     </div> 
                     <div className="col-md-3">
-                        <img src="https://picsum.photos/500/500" className="img-fluid" />
-                        <h3>Investigaciones</h3>
+                        <div className="squad">
+                            <i className="fa fa-archive"></i>
+                            <h3>Investigaciones</h3>
+                        </div>    
                     </div>    
                 </div>   
                 

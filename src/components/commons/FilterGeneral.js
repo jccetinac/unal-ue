@@ -7,7 +7,7 @@ export const FilterGeneral = () => {
         <form>
             <div className="row pt-4">
                 <div className="col-md-6">
-                        <select class="form-control">
+                        <select className="form-control">
                             <option>indicador 1</option>
                             <option>indicador 2</option>
                             <option>indicador 3</option>
@@ -15,14 +15,14 @@ export const FilterGeneral = () => {
                         </select>
                 </div>
                 <div className="col-md-2">
-                        <select class="form-control">
+                        <select className="form-control">
                             <option>2017</option>
                             <option>2018</option>
                             <option>2019</option>
                         </select>
                 </div>
                 <div className="col-md-2">
-                        <select class="form-control">
+                        <select className="form-control">
                             <option>2017</option>
                             <option>2018</option>
                             <option>2019</option>

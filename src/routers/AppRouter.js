@@ -58,7 +58,9 @@ export const AppRouter = () => {
 
     if ( checking ) {
         return (
-            <h1>isLoading</h1>
+            <div className="loader-container p-5 mt-5">
+            <img src="/img/loader.gif"  className="m-auto loader" />
+            </div>
         )
     }
 
