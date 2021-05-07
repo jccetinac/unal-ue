@@ -12,7 +12,7 @@ export const IndicadorScreen = () => {
     labels: ["Bogota", "Medellin", "Cali", "Pereira", "Ibague", "Otra"],
     datasets: [
       {
-        label: "indicador #1",
+        label: "personas",
         data: [12, 19, 3, 5, 2, 3],
         backgroundColor: [
           "rgba(255, 99, 132, 0.2)",
@@ -39,7 +39,7 @@ export const IndicadorScreen = () => {
     labels: ["2017", "2018", "2019", ],
     datasets: [
       {
-        label: "indicador #1",
+        label: "personas",
         data: [12, 19, 3, 5, 2, 3],
         backgroundColor: [
           "rgba(255, 99, 132, 0.2)",

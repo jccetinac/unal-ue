@@ -8,7 +8,7 @@ export const FilterGeneral = () => {
             <div className="row pt-4">
                 <div className="col-md-5">
                         <select className="form-control">
-                            <option>indicador 1</option>
+                            <option>Solicitudes de patentes presentadasColombia</option>
                             <option>indicador 2</option>
                             <option>indicador 3</option>
                             <option>indicador 4</option>
@@ -23,7 +23,7 @@ export const FilterGeneral = () => {
                 </div>
     
                 <div className="col-md-2">
-                    <button className="btn btn-info text-white" ><i className="fa fa-search"></i></button>
+                    <button className="btn btn-primary text-white" ><i className="fa fa-search"></i></button>
                 </div>
             </div>
         </form>
