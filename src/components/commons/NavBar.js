@@ -19,7 +19,7 @@ export const Navbar = () => {
                 <img src="/img/logo_min.jpeg" className="logo" ></img>
             </div>
 
-            <div className="links container-fluid bg-primary pb-0">
+            <div className="links container-fluid bg-primary-light pb-0">
                 <button className="btn bt-primary text-white log-out"onClick={ hanleLogout }><i class="fa fa-power-off"></i></button>
                 <Link className="btn bt-primary text-white " to="/"className="link">Inicio</Link>
                 <Link className="btn bt-primary text-white" to="/proyecto"className="link">Proyecto</Link>

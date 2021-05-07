@@ -1,5 +1,4 @@
 import React from 'react';
-import { DetailsGeneral } from './DetailsGeneral';
 
 
 export const DescriptionGeneral = () => {
