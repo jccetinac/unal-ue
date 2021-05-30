@@ -2,55 +2,58 @@ import React from "react";
 import { DescriptionGeneral } from "../commons/DescriptionGeneral";
 import { FilterGeneral } from "../commons/FilterGeneral";
 import { Navbar } from "../commons/NavBar";
-import { DetailsGeneral } from "../commons/DetailsGeneral";
-import { Doughnut } from "react-chartjs-2";
 import { Bar } from "react-chartjs-2";
 import { Footer } from "../commons/Footer";
+import { useParams } from "react-router-dom";
+import { useSelector } from 'react-redux';
 
-export const IndicadorScreen = () => {
+
+export const IndicadorScreen =  ()  => {
+  let { id } = useParams();
+
+  const { indicadoresList, citySelected, yearSelected }= useSelector( state => state.indicadores);
+  const { descripcionesList } = useSelector(state => state.descripciones);
+
+  const onlyUnique= (value, index, self)=> { return self.indexOf(value) === index; };
+  const colors= [ "#158A6F", "#069169", "#33A584","#158A6F", "#069169", "#33A584","#158A6F" ];
+
+  // filtrando por indicador url
+    const indicadoresByCodigo= indicadoresList.filter(indicador=> indicador.codigo === id);
+  // listado de ciudades
+    const listaCiudades = indicadoresByCodigo.map(indicador => indicador.cuidad).sort().filter( onlyUnique );
+  // listado de ciudades
+    const listaYears = indicadoresByCodigo.map(indicador => indicador.ano).sort().filter( onlyUnique );
+  // filtrados por ciudad
+    const indicadoresbyCity= indicadoresByCodigo.filter(indicador=> indicador.cuidad === citySelected); 
+  // filtrados por Año
+    const indicadoresbyYear= indicadoresByCodigo.filter(indicador=> indicador.ano === parseInt(yearSelected));  
+  
+  // filtro descripcion 
+    const indicadorDescription= descripcionesList.filter(indicador=> indicador.codigo === id)[0];
+  
+
   const data = {
-    labels: ["Bogota", "Medellin", "Cali", "Pereira", "Ibague", "Otra"],
+    labels: indicadoresbyYear.map( indicador => indicador.cuidad),
     datasets: [
       {
         label: "personas",
-        data: [12, 19, 3, 5, 2, 3],
-        backgroundColor: [
-          "rgba(255, 99, 132, 0.2)",
-          "rgba(54, 162, 235, 0.2)",
-          "rgba(255, 206, 86, 0.2)",
-          "rgba(75, 192, 192, 0.2)",
-          "rgba(153, 102, 255, 0.2)",
-          "rgba(255, 159, 64, 0.2)"
-        ],
-        borderColor: [
-          "rgba(255, 99, 132, 1)",
-          "rgba(54, 162, 235, 1)",
-          "rgba(255, 206, 86, 1)",
-          "rgba(75, 192, 192, 1)",
-          "rgba(153, 102, 255, 1)",
-          "rgba(255, 159, 64, 1)"
-        ],
+        data: indicadoresbyYear.map( indicador => indicador.valor),
+        backgroundColor: colors,
+        borderColor: colors,
         borderWidth: 1
       }
     ]
   };
 
+
   const data2 = {
-    labels: ["2017", "2018", "2019", ],
+    labels: indicadoresbyCity.map(indicador=> indicador.ano),
     datasets: [
       {
         label: "personas",
-        data: [12, 19, 3, 5, 2, 3],
-        backgroundColor: [
-          "rgba(255, 99, 132, 0.2)",
-          "rgba(54, 162, 235, 0.2)",
-          "rgba(255, 206, 86, 0.2)"
-        ],
-        borderColor: [
-          "rgba(255, 99, 132, 1)",
-          "rgba(54, 162, 235, 1)",
-          "rgba(255, 206, 86, 1)"
-        ],
+        data: indicadoresbyCity.map(indicador=> {return  indicador.valor}),
+        backgroundColor: colors,
+        borderColor: colors,
         borderWidth: 1
       }
     ]
@@ -61,8 +64,9 @@ export const IndicadorScreen = () => {
       <Navbar />
 
       <main className="container pt-5">
-        <h1>Indicador</h1>
-        <DescriptionGeneral /><FilterGeneral />
+        <p>Indicador</p>
+        <h1>{id}</h1>
+        <DescriptionGeneral indicador={ indicadorDescription } /><FilterGeneral listaCiudades={listaCiudades} listaYears={listaYears} />
         
         <div className="row mt-4">
           <div className="col-md-6">

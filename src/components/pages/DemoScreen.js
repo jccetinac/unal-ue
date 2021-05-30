@@ -1,12 +1,10 @@
 import React from 'react';
 import { Navbar } from '../commons/NavBar';
-import { useSelector } from 'react-redux';
 
 
 export const DemoScreen = () => {
 
-    const { indicadoresList} = useSelector( state => state.indicadores);
-    console.log(indicadoresList);
+
 
     return (
         <div>

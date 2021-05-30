@@ -7,9 +7,6 @@ import { Link } from 'react-router-dom';
 
 export const ProyectoScreen = () => {
 
-    const { indicadoresList} = useSelector( state => state.indicadores);
-    console.log(indicadoresList);
-
     return (
         <div className="journal__main-content">
             

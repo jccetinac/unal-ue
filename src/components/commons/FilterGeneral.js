@@ -1,25 +1,42 @@
 import React from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { setSelectedCity, setSelectedYear } from '../../actions/indicadores';
 
 
-export const FilterGeneral = () => {
+export const FilterGeneral = ({listaCiudades, listaYears}) => {
+    const dispatch = useDispatch();
+
+  const { citySelected, yearSelected }= useSelector( state => state.indicadores);
+    
+
+    function handleSelectChangeCity(event) {
+        dispatch( setSelectedCity(event.target.value) ); 
+    }
+
+    function handleSelectChangeYear(event) {
+        dispatch( setSelectedYear(event.target.value) ); 
+    }
 
     return (
         <form>
             <div className="row pt-4">
                 <div className="col-md-5">
-                        <select className="form-control">
-                            <option>Solicitudes de patentes presentadasColombia</option>
-                            <option>indicador 2</option>
-                            <option>indicador 3</option>
-                            <option>indicador 4</option>
+                        <select className="form-control"  value={yearSelected} onChange={handleSelectChangeYear}> /
+                            <option>elige un año</option>
+                            {listaYears?.map( year => (
+                            <option value={year} >{year}</option>  
+                            ))}
                         </select>
+
                 </div>
                 <div className="col-md-5">
-                        <select className="form-control">
-                            <option>Bogotá</option>
-                            <option>Medellin</option>
-                            <option>Bucaramanga</option>
+                        <select className="form-control"  value={citySelected} onChange={handleSelectChangeCity}> /
+                            <option>elige una ciudad</option>
+                            {listaCiudades?.map( ciudad => (
+                            <option value={ciudad} >{ciudad}</option>  
+                            ))}
                         </select>
+
                 </div>
     
                 <div className="col-md-2">

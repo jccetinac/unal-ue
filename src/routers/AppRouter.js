@@ -25,6 +25,8 @@ import { IndicadorScreen } from '../components/pages/IndicadorScreen';
 import { ProductosScreen } from '../components/pages/ProductosScreen';
 import { ArchivosScreen } from '../components/pages/ArchivosScreen';
 import { RegionesScreen } from '../components/pages/RegionesScreen';
+import { loadDescripciones } from '../helpers/load-definiciones';
+import { setDescripciones } from '../actions/descripciones';
 
 export const AppRouter = () => {
 
@@ -42,8 +44,11 @@ export const AppRouter = () => {
             if ( user?.uid ) {
                 dispatch( login( user.uid, user.displayName ) );
                 setIsLoggedIn( true );
-                const indicadores = await loadIndicadores();
-                dispatch( setIndicadores(indicadores) );              
+                 const indicadores = await loadIndicadores();
+                 dispatch( setIndicadores(indicadores) );          
+                   
+                 const descripciones = await loadDescripciones();
+                 dispatch( setDescripciones(descripciones));  
 
             } else {
                 setIsLoggedIn( false );

@@ -6,8 +6,6 @@ import { Footer } from '../commons/Footer';
 
 export const ProductosScreen = () => {
 
-    const { indicadoresList} = useSelector( state => state.indicadores);
-    console.log(indicadoresList);
 
     return (
         <div className="journal__main-content">

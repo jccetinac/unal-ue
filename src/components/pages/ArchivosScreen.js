@@ -8,7 +8,6 @@ import { Link } from 'react-router-dom';
 export const ArchivosScreen = () => {
 
     const { indicadoresList} = useSelector( state => state.indicadores);
-    console.log(indicadoresList);
 
     return (
         <div className="journal__main-content">
