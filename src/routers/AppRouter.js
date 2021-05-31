@@ -27,6 +27,7 @@ import { ArchivosScreen } from '../components/pages/ArchivosScreen';
 import { RegionesScreen } from '../components/pages/RegionesScreen';
 import { loadDescripciones } from '../helpers/load-definiciones';
 import { setDescripciones } from '../actions/descripciones';
+import { NoFoundScreen } from '../components/pages/NoFoundScreen';
 
 export const AppRouter = () => {
 
@@ -149,7 +150,14 @@ export const AppRouter = () => {
                         path="/dashboard/city/:city"
                         component={ CityScreen }
                     /> 
-                                                     
+
+                     <PrivateRoute 
+                        exact
+                        isAuthenticated={ isLoggedIn }
+                        path="/proximamente"
+                        component={ NoFoundScreen }
+                    />
+
                     <Redirect to="/auth/login" />
 
 

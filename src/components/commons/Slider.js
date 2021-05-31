@@ -17,7 +17,9 @@ export default function SimpleSlider() {
       <div className="item p-5">
        <div className="row">
            <div className="col-md-6">
-               <h3 className="display-5">CONOZCA LA ESTRUCTURACIÓN DE UN INSTRUMENTO PERIÓDICO DE MEDICIÓN DEL EMPRENDIMIENTO PARA COLOMBIA</h3>
+               <h3 className="display-5 mt-4">
+                  Observatorio de emprendimiento e instrumentos de medición para Colombia 
+               </h3>
            </div>
            <div className="col-md-6">
            <img src="/img/portada1.png" className="img-fluid" />
@@ -28,7 +30,14 @@ export default function SimpleSlider() {
       <div className="item p-5">
        <div className="row">
            <div className="col-md-6">
-               <p className="mt-5 text-justify">La Batería de indicadores es un instrumento fundamental para lograr cumplir con los objetivos específicos del Conpes, ya que, este instrumento permite medir la actividad emprendedora del país en todas sus dimensiones y permitirá fortalecer, mejorar o crear, desde la política pública, medidas que sean coherentes con las necesidades de los emprendedores. Adicionalmente, la Batería permitirá hacer seguimiento a la evolución del emprendimiento y así generar propuestas de apoyo e incentivos institucionales.</p>
+               <p className="mt-5 text-justify">
+                  <b>Normativa reciente Gobierno Nacional: </b>
+                  <br></br>
+                  Conpes No. 4011 : Generar condiciones habilitantes en el ecosistema emprendedor para la creación, sostenibilidad y crecimiento de emprendimientos que contribuyan a la generación de ingresos, riqueza y aumentos en la productividad e internacionalización empresarial
+                  <br></br>
+                  Ley de emprendimiento 2069 del 31 dic 2020: 
+                  Establecer un marco regulatorio que propicie el emprendimiento y el crecimiento, consolidación y sostenibilidad de las empresas, con el fin de aumentar el bienestar social y generar equidad. Dicho marco delineará un enfoque regionalizado de acuerdo a las realidades socioeconómicos de cada región
+              </p>
            </div>
            <div className="col-md-6">
            <img src="/img/portada1.png" className="img-fluid" />

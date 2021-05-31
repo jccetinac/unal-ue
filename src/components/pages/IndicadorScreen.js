@@ -20,11 +20,11 @@ export const IndicadorScreen =  ()  => {
   // filtrando por indicador url
     const indicadoresByCodigo= indicadoresList.filter(indicador=> indicador.codigo === id);
   // listado de ciudades
-    const listaCiudades = indicadoresByCodigo.map(indicador => indicador.cuidad).sort().filter( onlyUnique );
+    const listaCiudades = indicadoresByCodigo.map(indicador => indicador.ciudad).sort().filter( onlyUnique );
   // listado de ciudades
     const listaYears = indicadoresByCodigo.map(indicador => indicador.ano).sort().filter( onlyUnique );
   // filtrados por ciudad
-    const indicadoresbyCity= indicadoresByCodigo.filter(indicador=> indicador.cuidad === citySelected); 
+    const indicadoresbyCity= indicadoresByCodigo.filter(indicador=> indicador.ciudad === citySelected); 
   // filtrados por Año
     const indicadoresbyYear= indicadoresByCodigo.filter(indicador=> indicador.ano === parseInt(yearSelected));  
   
@@ -33,10 +33,10 @@ export const IndicadorScreen =  ()  => {
   
 
   const data = {
-    labels: indicadoresbyYear.map( indicador => indicador.cuidad),
+    labels: indicadoresbyYear.map( indicador => indicador.ciudad),
     datasets: [
       {
-        label: "personas",
+        label: indicadorDescription['unidad-medida'] || "unidad de medida",
         data: indicadoresbyYear.map( indicador => indicador.valor),
         backgroundColor: colors,
         borderColor: colors,
@@ -50,7 +50,7 @@ export const IndicadorScreen =  ()  => {
     labels: indicadoresbyCity.map(indicador=> indicador.ano),
     datasets: [
       {
-        label: "personas",
+        label: indicadorDescription['unidad-medida'] || "unidad de medida",
         data: indicadoresbyCity.map(indicador=> {return  indicador.valor}),
         backgroundColor: colors,
         borderColor: colors,
@@ -64,9 +64,10 @@ export const IndicadorScreen =  ()  => {
       <Navbar />
 
       <main className="container pt-5">
-        <p>Indicador</p>
-        <h1>{id}</h1>
-        <DescriptionGeneral indicador={ indicadorDescription } /><FilterGeneral listaCiudades={listaCiudades} listaYears={listaYears} />
+        <p>Indicador {id}</p>
+        <DescriptionGeneral indicador={ indicadorDescription } />
+        <hr></hr>
+        <FilterGeneral listaCiudades={listaCiudades} listaYears={listaYears} />
         
         <div className="row mt-4">
           <div className="col-md-6">

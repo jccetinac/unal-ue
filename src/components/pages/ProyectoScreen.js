@@ -17,19 +17,27 @@ export const ProyectoScreen = () => {
       
                 <div className="row">
                     <div className="col-md-6 text-justify">
-                    <p> <b>Nombre del proyecto: </b>
-                        ESTRUCTURACIÓN DE UN INSTRUMENTO PERIÓDICO DE MEDICIÓN DEL EMPRENDIMIENTO PARA COLOMBIA
-                        Iniciativa del Ministerio de Comercio Industria y Turismo – MINCIT con apoyo del Programa Colombia + Competitiva, Cooperación de SECO, Embajada Suiza en Colombia -Facilitado por Swisscontact</p>
-                    <p><b>Ejecutor: </b>Unidad de emprendimiento e innovación Universidad Nacional de Colombia</p>
-                    <p><b>Objetivo del proyecto: </b>
-                        Construir, bajo criterios de comparabilidad internacional, una batería de indicadores que de cuenta de la actividad emprendedora en Colombia y produzca la información requerida para soportar el diseño de política pública e instrumentos para la promoción del emprendimiento. 
-                        Definición de un modelo de operación para el sistema de medición de emprendimiento, que implemente la batería de indicadores propuesta, para la generación de información de manera permanente.</p>
-                    <p><b>¿Qué problema resuelve el observatorio?: </b>Actualmente la Información sobre la actividad emprendedora dispersa y desarticulada, con el observatorio la información estará consolidada para tomar decisiones y será comparable con países OCDE y con despliegue regional</p>  
+                    
+                    <h2>Pertinencia y beneficios:</h2>
+                        <ul>
+                        <li>Generar articulación en el ecosistema de emprendimiento</li>
+                        <li>Generar información para política pública</li>
+                        <li>Fortalecimiento de las dinámicas regionales en la medición de la actividad emprendedora</li>
+                        <li>Disponer de indicadores que permitan la comparabilidad internacional</li>
+                        <li>Necesidad de disponer de una entidad autónoma e Independiente para la observación de la dinámica emprendedora del país</li>
+                        <li>Obtener información periódica para medir la dinámica emprendedora a partir del marco conceptual definido</li>
+                        <li>Oferta de un portafolio de productos (batería de indicadores, evaluaciones de impacto, estudios especializados sobre emprendimiento, diplomados, seminarios, conferencias especializadas e investigaciones en general</li> 
+                        </ul>
+
+
+                    
+                    
+                    
                     <Link to="/archivos" className="btn btn-primary d-block float-right">Productos</Link>
 
                     </div>
                     <div className="col-md-6">
-                        <img src="/img/portada1.png" className="img-fluid w-70" />
+                        <img src="/img/grafico.png" className="img-fluid w-70" />
                     </div>
                 </div>   
             </main>

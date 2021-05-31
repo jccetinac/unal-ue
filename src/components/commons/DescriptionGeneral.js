@@ -2,16 +2,17 @@ import React from 'react';
 
 
 export const DescriptionGeneral = ({indicador}) => {
-
+    console.log(indicador);
     return (<div>
+        <h1>{ indicador.nombre }</h1>
         <div className="row pt-4">
             <div className="col-md-5 ">
-                <p><b>{ indicador.nombre } :</b>{indicador.definicion}</p>
+                
+                <p><b>Definición :</b> {indicador.definicion}</p>
                 
             </div>
             <div className="col-md-5">
-                <i>Cálculo: {indicador.calculo}</i>
-                <p>Seleccione una ciudad o país</p>
+                <p><b>Cálculo: </b>{indicador.calculo}</p>
             </div>
 
         </div>

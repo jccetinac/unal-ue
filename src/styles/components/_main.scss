@@ -113,7 +113,7 @@ body{
         margin-top: 20px;
     }
     .squad {
-        background: $primary;
+        background: $middle-grey;
         color: white;
         text-align: center;
         padding: 2em;
@@ -129,4 +129,13 @@ body{
             margin-bottom: 20px;
         }
     }
+}
+
+.bg-primary{
+    background-color: $primary !important;
+}
+
+.vertical-text {
+    transform: rotate(90deg);
+    transform-origin: left top 0;
 }
