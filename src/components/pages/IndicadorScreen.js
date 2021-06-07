@@ -66,12 +66,15 @@ export const IndicadorScreen =  ()  => {
     ]
   };
 
+
+  console.log(indicadorDescription);
   return (
     <div>
       <Navbar />
 
       <main className="container pt-5">
         <p>Indicador {id}</p>
+        <p>{indicadorDescription['dimension']}: {indicadorDescription['cat-m-teorico']}</p>
         <DescriptionGeneral indicador={ indicadorDescription } />
         <hr></hr>
         <FilterGeneral listaCiudades={listaCiudades} listaYears={listaYears} />

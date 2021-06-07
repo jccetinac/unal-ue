@@ -67,7 +67,8 @@
   
 
     .logos{
-        max-width: 100%;
+        width: 90%;
+        max-width: 900px;
     }
 }
 
@@ -156,17 +157,17 @@ body{
 }
 
 .bg-img1{
-    background-image: url('https://firebasestorage.googleapis.com/v0/b/react-app-unal.appspot.com/o/demo1.jpeg?alt=media&token=1c03bb94-c134-4c3a-9b91-04c5a251bf21');
+    background-image: url('https://firebasestorage.googleapis.com/v0/b/react-app-unal.appspot.com/o/2.jpg?alt=media&token=b7659d6f-cb87-412d-9e10-93377346e2db');
     background-size: cover; 
 }
 
 .bg-img2{
-    background-image: url('https://firebasestorage.googleapis.com/v0/b/react-app-unal.appspot.com/o/demo2.jpeg?alt=media&token=21f05244-25e2-4e12-ac7b-d5ac0ed393fc');
+    background-image: url('https://firebasestorage.googleapis.com/v0/b/react-app-unal.appspot.com/o/1.jpg?alt=media&token=82489fbd-f5d6-4462-8fae-be716d73013b');
     background-size: cover; 
 }
 
 .bg-img3{
-    background-image: url('https://firebasestorage.googleapis.com/v0/b/react-app-unal.appspot.com/o/demo3.jpeg?alt=media&token=41ca943b-7bf6-4ee6-824c-20f5a1d636fe');
+    background-image: url('https://firebasestorage.googleapis.com/v0/b/react-app-unal.appspot.com/o/3.jpg?alt=media&token=6bbc7a12-139d-4477-8d35-8800426436b1');
     background-size: cover; 
 }
 
@@ -198,6 +199,26 @@ body{
     position: relative;
     margin-left: 10%;
 }
+
+
+.proyecto{
+    .card{
+        min-height: 380px;
+        margin-bottom: 10px;
+        background-color: $primary;
+        color: white;
+        border: 0px;
+    }    
+}
+
+.card-header, select{
+    cursor: pointer;
+}
+
+
+
+
+
 
 
 .desktop{

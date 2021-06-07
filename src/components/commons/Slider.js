@@ -17,13 +17,12 @@ export default function SimpleSlider() {
       <div className="item bg-img1">
         <div className=" p-5 bg-primary-cristal ">  
           <div className="row">
-              <div className="col-md-6">
+              <div className="col-md-6 pt-4">
                   <h3 className="display-5 mt-4">
                       Observatorio de emprendimiento e instrumentos de medición para Colombia 
                   </h3>
               </div>
               <div className="col-md-6">
-              <img src="/img/portada1.png" className="img-fluid" />
               </div>
           </div>
         </div>
@@ -32,6 +31,7 @@ export default function SimpleSlider() {
       <div className="item bg-img2">
         <div className=" p-5 bg-primary-cristal ">  
         <div className="row">
+            <div className="col-md-6"> </div>
             <div className="col-md-6">
                 <p className="mt-5 text-justify">
                     <b>Normativa reciente Gobierno Nacional: </b>
@@ -42,21 +42,17 @@ export default function SimpleSlider() {
                     Establecer un marco regulatorio que propicie el emprendimiento y el crecimiento, consolidación y sostenibilidad de las empresas, con el fin de aumentar el bienestar social y generar equidad. Dicho marco delineará un enfoque regionalizado de acuerdo a las realidades socioeconómicos de cada región
                 </p>
             </div>
-            <div className="col-md-6">
-            <img src="/img/portada1.png" className="img-fluid" />
-            </div>
+            
         </div>
         </div>
       </div>
 
       <div className="item  bg-img3">
         <div className=" p-5 bg-primary-cristal ">        
-          <div className="row">
+          <div className="row mt-5">
         
         <div className="col-md-6">
           <p className="text-justify">El Gobierno Nacional expidió el pasado 30 de noviembre el Documento Conpes No. 4011 “Política Nacional de Emprendimiento”, el cual tiene como objetivo generar condiciones habilitantes en el ecosistema emprendedor para la creación, sostenibilidad y crecimiento de emprendimientos que contribuyan a la generación de ingresos, riqueza y aumentos en la productividad e internacionalización empresarial. Esta política plantea cinco objetivos específicos:</p>
-        </div>
-        <div className="col-md-6">
           <ul>
               <li>Fortalecer el desarrollo de habilidades y fomentar una cultura emprendedora</li>
               <li>Mejorar el acceso y la sofisticación de mecanismos de financiamiento </li>
@@ -64,7 +60,8 @@ export default function SimpleSlider() {
               <li>Facilitar el desarrollo tecnológico y la innovación en los emprendimientos </li>
               <li>Fortalecer la arquitectura institucional para lograr una oferta pública articulada, eficiente, oportuna y basada en evidencia, que brinde condiciones habilitantes al ecosistema emprendedor.</li>
           </ul>
-        </div>
+       </div>
+        <div className="col-md-6"> </div>
 
         </div>
         </div>

@@ -16,7 +16,7 @@ export const Navbar = () => {
         <nav className="navbar pb-0">
 
             <div className="container-fluid">
-                <img src="/img/logo_min.jpeg" className="logo" ></img>
+                <img src="https://firebasestorage.googleapis.com/v0/b/react-app-unal.appspot.com/o/logo_min.jpeg?alt=media&token=5b3e5fe2-fd19-41ec-bb9f-2a567f47806b" className="logo" ></img>
             </div>
 
             <div className="links container-fluid bg-primary-light pb-0">

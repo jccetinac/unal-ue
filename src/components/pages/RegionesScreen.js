@@ -38,7 +38,7 @@ export const RegionesScreen = () => {
                     </div>
                     <div className="col-md-3"></div>
                     <div className="col-md-6">
-                        <img src="/img/mapa.jpeg" className="img-fluid w-100" />
+                        <img src="https://firebasestorage.googleapis.com/v0/b/react-app-unal.appspot.com/o/mapa.jpeg?alt=media&token=a39dde4f-af12-4086-bec2-7ad1c06b0207" className="img-fluid w-100" />
                     </div>
 
             </div>        
