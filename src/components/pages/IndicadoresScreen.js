@@ -9,8 +9,13 @@ export const IndicadoresScreen = () => {
 
     const { descripcionesList } = useSelector( state => state.descripciones);
     const onlyUnique= (value, index, self)=> { return self.indexOf(value) === index; };
-    const categorias = descripcionesList.map(indicador => indicador['cat-m-teorico']).filter(cat=> cat !== undefined).filter( onlyUnique );
-    console.log(categorias);
+
+
+    const desempenoList = descripcionesList.filter(indicador=> indicador.dimension==='Desempeño empresarial').map(indicador => indicador['cat-m-teorico']).filter(cat=> cat !== undefined).filter( onlyUnique );
+    const determinantesList = descripcionesList.filter(indicador=> indicador.dimension==='Determinante').map(indicador => indicador['cat-m-teorico']).filter(cat=> cat !== undefined).filter( onlyUnique );
+    const impactoList = descripcionesList.filter(indicador=> indicador.dimension==='Impacto').map(indicador => indicador['cat-m-teorico']).filter(cat=> cat !== undefined).filter( onlyUnique );
+
+console.log(impactoList);
 
     return (
         <div className="journal__main-content">
@@ -27,32 +32,58 @@ export const IndicadoresScreen = () => {
                         <div className="card p-4">
                             <h4 className="mb-3 mt-3"><b>Insumos:</b></h4>
                             <p>determinates del emprendimiento</p>
-                            <Link  className="btn btn-light text-gray w-100 mt-3"  >Cultura y capital humano</Link>
-                            <Link  className="btn btn-light text-gray w-100 mt-3"  >Acceso afinanciamiento</Link>
-                            <Link  className="btn btn-light text-gray w-100 mt-3"  >Redes</Link>
-                            <Link  className="btn btn-light text-gray w-100 mt-3"  >Marco regulatorio e institucional</Link>
-                            <Link  className="btn btn-light text-gray w-100 mt-3"  >Industria de soporte</Link>
-                            <Link  className="btn btn-light text-gray w-100 mt-3"  >Innovación y desarrollo tecnológico</Link>
-                        </div>
 
+                            { determinantesList.length !=0 ? (
+                                determinantesList.map(categoria=>(
+                                    <Link to={ "/dimension/"+ categoria } className="btn btn-primary w-100 mt-3"  >{categoria}</Link>))
+                            ): 
+                            (
+                                <>
+                                <Link  to="/dimension/cultura y capital humano" className="btn btn-light text-gray w-100 mt-3"  >Cultura y capital humano</Link>
+                                <Link  to="/dimension/acceso afinanciamiento" className="btn btn-light text-gray w-100 mt-3"  >Acceso afinanciamiento</Link>
+                                <Link  to="/dimension/redes" className="btn btn-light text-gray w-100 mt-3"  >Redes</Link>
+                                <Link  to="/dimension/marco regulatorio e institucionalidad" className="btn btn-light text-gray w-100 mt-3"  >Marco regulatorio e institucionalidad</Link>
+                                <Link  to="/dimension/industria de soporte" className="btn btn-light text-gray w-100 mt-3"  >Industria de soporte</Link>
+                                <Link  to="/dimension/innovación y desarrollo tecnológico" className="btn btn-light text-gray w-100 mt-3"  >Innovación y desarrollo tecnológico</Link>
+                                </>
+                            ) }
+
+                            
+                        </div>
+                        
                     </div>
+
+
                     <div className="col-md-4">
                         <div className="card p-4">
                              <h4 className="mb-3 mt-3"><b>Desempeño: </b></h4>
                              <p>desempeño empresarial a nivel micro</p>
-                                {categorias.map(categoria=>(
+                                {desempenoList.map(categoria=>(
                                 <Link to={ "/dimension/"+ categoria } className="btn btn-primary w-100 mt-3"  >{categoria}</Link>
                                 ))} 
                         </div>
                     </div>
+
+
+
                     <div className="col-md-4">
                         <div className="card p-4">
-                            <h4 className="mb-3 mt-3"><b>Impacto:</b></h4>
+                            <h4 className="mb-3 mt-3"><b>Impacto::</b></h4>
                             <p>desempeño empresarial (a nivel macro)</p>
-                            <Link  className="btn btn-light text-gray w-100 mt-3"  >Empleo</Link>
-                            <Link  className="btn btn-light text-gray w-100 mt-3"  >Formalidad</Link>
-                            <Link  className="btn btn-light text-gray w-100 mt-3"  >Productividad</Link>
-                            <Link  className="btn btn-light text-gray w-100 mt-3"  >Crecimeinto económico</Link>
+
+                            { impactoList.length != 0 ? (
+                                impactoList.map(categoria=>(
+                                    <Link to={ "/dimension/"+ categoria } className="btn btn-primary w-100 mt-3"  >{categoria}</Link>))
+                            ): 
+                            (
+                                <>
+                                <Link to="/dimension/empleo" className="btn btn-light text-gray w-100 mt-3"  >Empleo</Link>
+                                <Link to="/dimension/formalidad"  className="btn btn-light text-gray w-100 mt-3"  >Formalidad</Link>
+                                <Link to="/dimension/productividad" className="btn btn-light text-gray w-100 mt-3"  >Productividad</Link>
+                                <Link to="/dimension/crecimiento económico" className="btn btn-light text-gray w-100 mt-3"  >Crecimiento económico</Link>
+                                </>
+                            )}
+                            
                         </div>
                     </div>  
                 </div>   

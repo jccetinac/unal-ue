@@ -24,7 +24,7 @@ export const FilterGeneral = ({listaCiudades, listaYears}) => {
                         <select className="form-control"  value={yearSelected} onChange={handleSelectChangeYear}> /
                             <option>elige un año</option>
                             {listaYears?.map( year => (
-                            <option value={year} >{year}</option>  
+                            <option value={year} key={year} >{year}</option>  
                             ))}
                         </select>
 
@@ -33,7 +33,7 @@ export const FilterGeneral = ({listaCiudades, listaYears}) => {
                         <select className="form-control"  value={citySelected} onChange={handleSelectChangeCity}> /
                             <option>elige una ciudad</option>
                             {listaCiudades?.map( ciudad => (
-                            <option value={ciudad} >{ciudad}</option>  
+                            <option value={ciudad} key={ciudad}>{ciudad}</option>  
                             ))}
                         </select>
 

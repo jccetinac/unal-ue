@@ -2,7 +2,6 @@ import React from 'react';
 
 
 export const DescriptionGeneral = ({indicador}) => {
-    console.log(indicador);
     return (<div>
         <h1>{ indicador.nombre }</h1>
         <div className="row pt-4">
@@ -12,7 +11,7 @@ export const DescriptionGeneral = ({indicador}) => {
                 
             </div>
             <div className="col-md-5">
-                <p><b>Cálculo: </b>{indicador.calculo}</p>
+                <p className="hidden"><b>Cálculo: </b>{indicador.calculo}</p>
             </div>
 
         </div>

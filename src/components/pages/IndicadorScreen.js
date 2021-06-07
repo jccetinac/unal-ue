@@ -18,7 +18,16 @@ export const IndicadorScreen =  ()  => {
   const colors= [ "#158A6F", "#069169", "#33A584","#158A6F", "#069169", "#33A584","#158A6F" ];
 
   // filtrando por indicador url
-    const indicadoresByCodigo= indicadoresList.filter(indicador=> indicador.codigo === id);
+    //const indicadoresByCodigo= indicadoresList.filter(indicador=> indicador.codigo === id).filter(indicador=> indicador.valor > -1);
+    let indicadoresByCodigo= indicadoresList.filter(indicador=> indicador.codigo === id).map(indicador=>{
+         if(indicador.valor===-1) {
+           indicador.valor='ND'
+         }
+         return indicador;
+        });
+
+  // filtrar vacios 
+  
   // listado de ciudades
     const listaCiudades = indicadoresByCodigo.map(indicador => indicador.ciudad).sort().filter( onlyUnique );
   // listado de ciudades
