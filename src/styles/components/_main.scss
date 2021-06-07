@@ -60,7 +60,11 @@
 
 .footer{
     border-top:30px solid $primary-light;
-    margin-top: 100px !important;
+    margin-top: 0px !important;
+    position: static;
+    bottom: 0px;
+    background: white;
+  
 
     .logos{
         max-width: 100%;
@@ -140,6 +144,68 @@ body{
     transform-origin: left top 0;
 }
 
+.vertical-text-2 {
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    min-height: 100%;
+}
+
+
 .hidden {
     display: none;
 }
+
+.bg-img1{
+    background-image: url('https://firebasestorage.googleapis.com/v0/b/react-app-unal.appspot.com/o/demo1.jpeg?alt=media&token=1c03bb94-c134-4c3a-9b91-04c5a251bf21');
+    background-size: cover; 
+}
+
+.bg-img2{
+    background-image: url('https://firebasestorage.googleapis.com/v0/b/react-app-unal.appspot.com/o/demo2.jpeg?alt=media&token=21f05244-25e2-4e12-ac7b-d5ac0ed393fc');
+    background-size: cover; 
+}
+
+.bg-img3{
+    background-image: url('https://firebasestorage.googleapis.com/v0/b/react-app-unal.appspot.com/o/demo3.jpeg?alt=media&token=41ca943b-7bf6-4ee6-824c-20f5a1d636fe');
+    background-size: cover; 
+}
+
+.bg-primary-cristal {
+    background-color: #008e65bd !important;
+    height: 80vh;
+}
+
+.bg-primary-2 {
+    background-color: #008e6658 !important;
+}
+
+.bg-primary-3 {
+    background-color: #008e6620 !important;
+}
+
+.bg-indicadores{
+    height: 100%;
+    width: 85%;
+    z-index: 0;
+    position: absolute;
+    .section {
+        height: 36%;
+    }
+}
+
+.indicadores-footer{
+    z-index: 10;
+    position: relative;
+    margin-left: 10%;
+}
+
+
+.desktop{
+    display: block;
+}
+
+@media screen and (max-width: 1000px) {
+    .desktop{
+        display: none;
+    }
+  }

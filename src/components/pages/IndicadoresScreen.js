@@ -22,12 +22,20 @@ console.log(impactoList);
             
             <Navbar />
 
-
             <main className="main container p-5">  
                 <h1>Dimensiones</h1>  
-                <h3 className="p-2 vertical-text">Emprendimiento | Empresa </h3>
+               
+                <div className="bg-indicadores desktop">
+                    <div className="section bg-primary-2">
+                        <h3 className="p-1 pb-4 pt-4 vertical-text-2 bg-primary text-white">Emprendimiento </h3>
+                    </div>
+                    <div className="section bg-primary-3">
+                        <h3 className="p-1 pb-4 pt-4 vertical-text-2 bg-primary text-white">Empresa </h3>
+                    </div>
+                </div>
 
-                <div className="row">
+                <div className="ml-3 pt-5">
+                        <div className="row">
                     <div className="col-md-4">
                         <div className="card p-4">
                             <h4 className="mb-3 mt-3"><b>Insumos:</b></h4>
@@ -68,7 +76,7 @@ console.log(impactoList);
 
                     <div className="col-md-4">
                         <div className="card p-4">
-                            <h4 className="mb-3 mt-3"><b>Impacto::</b></h4>
+                            <h4 className="mb-3 mt-3"><b>Impacto:</b></h4>
                             <p>desempeño empresarial (a nivel macro)</p>
 
                             { impactoList.length != 0 ? (
@@ -86,16 +94,15 @@ console.log(impactoList);
                             
                         </div>
                     </div>  
-                </div>   
-                
-                <div className="bg-primary text-white mt-2">
-                <h3 className="text-center p-2">Emprendedor <i className="fas fa-angle-double-right"></i></h3>
+                </div>    
+               </div>
+                <div className="bg-primary text-white mt-2 indicadores-footer">
+                    <h3 className="text-center p-2">Emprendedor <i className="fas fa-angle-double-right"></i></h3>
                 </div>
             
             </main>
 
             <Footer/>
-
 
         </div>
     )
