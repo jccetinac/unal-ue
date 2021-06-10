@@ -48,7 +48,7 @@ export const ProyectoScreen = () => {
                                     src="https://firebasestorage.googleapis.com/v0/b/react-app-unal.appspot.com/o/5.jpg?alt=media&token=2e275afd-6127-46eb-acd8-c5b8abde2d46" 
                                     alt="google button" />
                                 <div className="card-body">
-                                <p>ortalecimiento de las dinámicas regionales en la medición de la actividad emprendedora</p>
+                                <p>Fortalecimiento de las dinámicas regionales en la medición de la actividad emprendedora</p>
                             </div>
                         </div>    
                         </div>

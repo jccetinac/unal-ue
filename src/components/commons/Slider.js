@@ -19,7 +19,7 @@ export default function SimpleSlider() {
           <div className="row">
               <div className="col-md-6 pt-4">
                   <h3 className="display-5 mt-4">
-                      Observatorio de emprendimiento e instrumentos de medición para Colombia 
+                      Instrumento de Medición del Emprendimiento para Colombia
                   </h3>
               </div>
               <div className="col-md-6">

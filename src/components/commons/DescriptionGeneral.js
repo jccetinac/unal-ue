@@ -3,7 +3,7 @@ import React from 'react';
 
 export const DescriptionGeneral = ({indicador}) => {
     return (<div>
-        <h1>{ indicador.nombre }</h1>
+        <h1>{ indicador.indice }</h1>
         <div className="row pt-4">
             <div className="col-md-5 ">
                 

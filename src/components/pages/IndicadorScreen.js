@@ -36,8 +36,7 @@ export const IndicadorScreen =  ()  => {
     const indicadoresbyYear= indicadoresByCodigo.filter(indicador=> indicador.ano === parseInt(yearSelected));  
   
   // filtro descripcion 
-    const indicadorDescription= descripcionesList.filter(indicador=> indicador.codigo === id)[0];
-  
+    const indicadorDescription= descripcionesList.filter(indicador=> indicador.codigo === id)[0]; 
 
   const data = {
     labels: indicadoresbyYear.map( indicador => indicador.ciudad),
@@ -67,12 +66,21 @@ export const IndicadorScreen =  ()  => {
   };
 
 
-  console.log(indicadorDescription);
+const ceroTodos= indicadoresByCodigo.map( indicador=> indicador.valor).filter(indicador=>indicador.valor!='ND');
+console.log(ceroTodos);
+
+
   return (
     <div>
       <Navbar />
-
       <main className="container pt-5">
+
+      {ceroTodos.length===0?(
+        <div className="alert-success p-5 m-5">
+          <h1>Información actualmente no disponible</h1>
+        </div>
+      ):(
+      <div>
         <p>Indicador {id}</p>
         <p>{indicadorDescription['dimension']}: {indicadorDescription['cat-m-teorico']}</p>
         <DescriptionGeneral indicador={ indicadorDescription } />
@@ -91,6 +99,9 @@ export const IndicadorScreen =  ()  => {
             </div>  
           </div>
         </div>
+      </div>        
+      )}
+
       </main>
       <Footer/>
     </div>

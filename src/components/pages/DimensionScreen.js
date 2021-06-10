@@ -13,9 +13,9 @@ export const DimensionScreen = () => {
 
     const { descripcionesList } = useSelector( state => state.descripciones);
 
-    const determinantesList = ['cultura y capital humano', 'acceso afinanciamiento','redes','marco regulatorio e institucionalidad','industria de soporte','innovación y desarrollo tecnológico'];
-    const desempenoList = ['basado en la empresa', 'basado en empleo', 'basado en riqueza'];
-    const impactoList = [ 'empleo', 'formalidad', 'productividad', 'crecimiento económico'];
+    const determinantesList = ['Cultura y capital humano', 'Acceso afinanciamiento','Redes','Marco regulatorio e institucionalidad','Industria de soporte','Innovación y desarrollo tecnológico'];
+    const desempenoList = ['Basado en la empresa', 'Basado en empleo', 'Basado en riqueza'];
+    const impactoList = [ 'Empleo', 'Formalidad', 'Productividad', 'Crecimiento económico'];
 
     let indicadoresByDimension = [];
 
@@ -59,7 +59,7 @@ export const DimensionScreen = () => {
                             {indicadoresByDimension?.map( indicador => (
                                 <Card className="mt-3" key={ indicador.id }>
                                     <Accordion.Toggle as={Card.Header} eventKey={ indicador.id }>
-                                    <b>{indicador.codigo}: </b>{indicador.nombre}
+                                    <b>{indicador.codigo}: </b>{indicador.indice}
                                     </Accordion.Toggle>
                                     <Accordion.Collapse eventKey={ indicador.id }>
                                         <Card.Body>

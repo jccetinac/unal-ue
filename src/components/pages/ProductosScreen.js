@@ -17,7 +17,7 @@ export const ProductosScreen = () => {
             <main className="main container productos p-5">
        
                 <div className="row">
-                    <div className="col-md-3">
+                    <div className="col-md-3 col-sm-6 ">
                       <Link to="/indicadores">
                         <div className="squad bg-primary">
                             <i className="fas fa-cubes"></i>
@@ -25,7 +25,7 @@ export const ProductosScreen = () => {
                         </div>                     
                       </Link>  
                     </div>                    
-                    <div className="col-md-3">
+                    <div className="col-md-3 col-sm-6 ">
                     <Link to="/proximamente">
                          <div className="squad">
                           <i className="fa fa-pie-chart"></i>
@@ -33,7 +33,7 @@ export const ProductosScreen = () => {
                         </div>
                     </Link>    
                     </div>
-                    <div className="col-md-3">
+                    <div className="col-md-3 col-sm-6 ">
                         <Link to="/proximamente">
                             <div className="squad">
                                 <i className="fa fa-podcast"></i>
@@ -41,7 +41,7 @@ export const ProductosScreen = () => {
                             </div>
                         </Link>
                     </div>                    
-                    <div className="col-md-3">
+                    <div className="col-md-3 col-sm-6 ">
                         <Link to="/proximamente">
                             <div className="squad">
                                 <i className="fas fa-chalkboard-teacher	"></i>
@@ -49,7 +49,7 @@ export const ProductosScreen = () => {
                             </div>
                         </Link>
                     </div> 
-                    <div className="col-md-3">
+                    <div className="col-md-3 col-sm-6 ">
                         <Link to="/proximamente">
                             <div className="squad">
                                 <i className="fas fa-poll"></i>
@@ -57,7 +57,7 @@ export const ProductosScreen = () => {
                             </div>   
                         </Link>
                     </div> 
-                    <div className="col-md-3">
+                    <div className="col-md-3 col-sm-6">
                         <Link to="/proximamente">
                         <div className="squad">
                             <i className="fas fa-poll-h"></i>
@@ -65,7 +65,7 @@ export const ProductosScreen = () => {
                         </div>   
                         </Link>
                     </div> 
-                    <div className="col-md-3">
+                    <div className="col-md-3 col-sm-6">
                         <Link to="/proximamente">
                         <div className="squad">
                             <i className="fa fa-newspaper-o"></i>
@@ -73,7 +73,7 @@ export const ProductosScreen = () => {
                         </div>
                         </Link>
                     </div> 
-                    <div className="col-md-3">
+                    <div className="col-md-3 col-sm-6 ">
                         <Link to="/proximamente">
                         <div className="squad">
                             <i className="fas fa-search-location"></i>
