@@ -8,8 +8,7 @@ export const Footer = () => {
     return (
         <nav className="footer container-fluid mt-3 p-3 ">
             <div className="row">  
-                <img src="https://firebasestorage.googleapis.com/v0/b/react-app-unal.appspot.com/o/logos.png?alt=media&token=e36c6c7e-9943-4a97-ae78-258e9e64da6c" className="d-block m-auto logos" />
-
+                <img src="https://firebasestorage.googleapis.com/v0/b/react-app-unal.appspot.com/o/logos.jpg?alt=media&token=396eaa58-1691-4a46-8bf7-900c330bc2c6" className="d-block m-auto logos" />
             </div>    
 
         </nav>
