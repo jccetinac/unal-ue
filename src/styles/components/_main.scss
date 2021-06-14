@@ -111,6 +111,20 @@ body{
     .display-5{
         font-size: 2.5em;
     }
+    .slick-next{
+        right: 0px;
+        margin-right: 50px;
+        z-index: 10;
+    }
+    .slick-prev{
+        left: 0px;
+        margin-left: 10px;
+        z-index: 10;
+    }
+    .slick-prev:before, .slick-next:before {
+        font-size: 2rem;
+        
+    }
 }
 
 .productos{

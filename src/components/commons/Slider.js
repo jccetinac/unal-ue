@@ -33,7 +33,7 @@ export default function SimpleSlider() {
         <div className="row">
             <div className="col-md-6"> </div>
             <div className="col-md-6">
-                <p className="mt-5 text-justify">
+                <p className="mt-5 pr-3 text-justify">
                     <b>Normativa reciente Gobierno Nacional: </b>
                     <br></br>
                     Conpes No. 4011 : Generar condiciones habilitantes en el ecosistema emprendedor para la creación, sostenibilidad y crecimiento de emprendimientos que contribuyan a la generación de ingresos, riqueza y aumentos en la productividad e internacionalización empresarial

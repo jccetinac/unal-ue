@@ -65,7 +65,7 @@ console.log(impactoList);
                     <div className="col-md-4">
                         <div className="card p-4">
                              <h4 className="mb-3 mt-3"><b>Desempeño: </b></h4>
-                             <p>desempeño empresarial a nivel micro</p>
+                             <p>desempeño empresarial (a nivel micro)</p>
                                 {desempenoList.map(categoria=>(
                                 <Link to={ "/dimension/"+ categoria } className="btn btn-primary w-100 mt-3"  >{categoria}</Link>
                                 ))} 

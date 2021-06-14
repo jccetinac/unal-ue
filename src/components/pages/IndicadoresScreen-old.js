@@ -32,7 +32,7 @@ export const IndicadoresScreen = () => {
                     <div className="col-md-4">
                         <div className="card p-4">
                              <h4 className="mb-3 mt-3"><b>Desempeño: </b></h4>
-                            <p>desempeño empresarial a nivel micro</p>
+                            <p>desempeño empresarial (a nivel micro)</p>
                             <Link to="/dimension/1" className="btn btn-primary w-100 mt-3"  >Basado en la empresa</Link>
                             <Link to="/dimension/2" className="btn btn-primary w-100 mt-3"  >Basado en el empleo</Link>
                             <Link to="/dimension/3" className="btn btn-primary w-100 mt-3"  >Basado en la riqueza</Link>
