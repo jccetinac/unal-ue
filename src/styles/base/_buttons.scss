@@ -62,3 +62,23 @@
     }
 }
 
+.btn-primary{
+    background-color: $primary;
+    border: none;
+    &:hover {
+        color: white;
+        background-color: $primary-light;
+      
+    }
+}
+
+.btn-light{
+    &:hover {
+        color: $middle-grey;
+    }
+}
+
+
+a {
+    text-decoration: unset;
+}

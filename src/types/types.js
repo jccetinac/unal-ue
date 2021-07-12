@@ -12,5 +12,10 @@ export const types = {
     uiFinishLoading: '[UI] Finish loading',
 
     setIndicadores:'[FIREBASE] Get indicadores',
+    setDescripciones:'[FIREBASE] Get descripciones',
+    setSelectedCity: '[FIREBASE] Set city selected',
+    setSelectedYear: '[FIREBASE] Set año selected'
+
+
 
 }

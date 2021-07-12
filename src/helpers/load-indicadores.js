@@ -1,9 +1,8 @@
 import { db } from "../firebase/firebase-config";
 
 export const loadIndicadores = async () => {
-
-   const indicadoresSnap = await db.collection(`/indicadores`).get();
-
+   const indicadoresSnap = await db.collection(`/indicadores-unal`).get();
+   
    const indicadores = [];
    indicadoresSnap.forEach( snapChild => {
         indicadores.push({

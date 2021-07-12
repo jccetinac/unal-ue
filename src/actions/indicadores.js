@@ -5,3 +5,13 @@ export const setIndicadores = ( indicadores ) => ({
     payload: indicadores
 });
 
+
+export const setSelectedCity = (city) =>({
+    type: types.setSelectedCity,
+    payload: city
+});
+
+export const setSelectedYear = (year) =>({
+    type: types.setSelectedYear,
+    payload: year
+});
