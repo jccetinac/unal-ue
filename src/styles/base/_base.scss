@@ -38,3 +38,17 @@ main {
 .pointer {
     cursor: pointer;
 }
+
+
+
+@media only screen and (min-width: 2000px) {
+    /* For ipad: */
+
+    .carrusel p, .carrusel li {
+        font-size: 2rem;
+    }
+
+    .carrusel .display-5 {
+        font-size: 4.5em;
+    }
+  }
