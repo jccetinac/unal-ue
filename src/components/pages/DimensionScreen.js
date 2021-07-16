@@ -50,30 +50,36 @@ export const DimensionScreen = () => {
 
                 <p>Indicadores de la dimensión: </p>
                 <h1> {id} </h1>
+
+                {indicadoresByDimension.length===0?(
+                    <h3>próximamente disponible</h3>
+                ):(
                 <div className="row">
-                    <div className="col-md-6">
-                           
+                <div className="col-md-6">
+                       
 
-                       <Accordion defaultActiveKey="0">
+                   <Accordion defaultActiveKey="0">
 
-                            {indicadoresByDimension?.map( indicador => (
-                                <Card className="mt-3" key={ indicador.id }>
-                                    <Accordion.Toggle as={Card.Header} eventKey={ indicador.id }>
-                                    <b>{indicador.codigo}: </b>{indicador.indice}
-                                    </Accordion.Toggle>
-                                    <Accordion.Collapse eventKey={ indicador.id }>
-                                        <Card.Body>
-                                            <p className="hidden"><b>Cálculo: </b>{indicador.calculo}</p>
-                                            <p><b>Definción: </b>{indicador.definicion}</p>
-                                            <Link className="btn btn-primary w-100" to={"/indicador/"+indicador.codigo}>ver indicador</Link><br></br>
-                                        </Card.Body>
-                                    </Accordion.Collapse>
-                                </Card>
-                            ))}
+                        {indicadoresByDimension?.map( indicador => (
+                            <Card className="mt-3" key={ indicador.id }>
+                                <Accordion.Toggle as={Card.Header} eventKey={ indicador.id }>
+                                <b>{indicador.codigo}: </b>{indicador.indice}
+                                </Accordion.Toggle>
+                                <Accordion.Collapse eventKey={ indicador.id }>
+                                    <Card.Body>
+                                        <p className="hidden"><b>Cálculo: </b>{indicador.calculo}</p>
+                                        <p><b>Definción: </b>{indicador.definicion}</p>
+                                        <Link className="btn btn-primary w-100" to={"/indicador/"+indicador.codigo}>ver indicador</Link><br></br>
+                                    </Card.Body>
+                                </Accordion.Collapse>
+                            </Card>
+                        ))}
 
-                        </Accordion>
-                    </div>
-                </div>   
+                    </Accordion>
+                </div>
+            </div>  
+                )}
+ 
             </main>
 
             <Footer/>
